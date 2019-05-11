@@ -1,0 +1,45 @@
+{
+  "name": "ekercode-cms",
+  "version": "0.1.0",
+  "config": {
+    "entry": "./src/index.js"
+  },
+  "scripts": {
+    "dev": "poi ${npm_package_config_entry} --serve",
+    "build": "poi ${npm_package_config_entry} --production"
+  },
+  "dependencies": {
+    "antd": "^3.17.0",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "normalize.css": "^8.0.1",
+    "poi": "^12.6.8",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "1.5.0"
+  }
+}
