@@ -2,9 +2,15 @@ import React from 'react';
 import { Layout as AntLayout, Menu, Icon } from 'antd';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
+
 import LOGO_IMAGE from './logo.png';
 
-const { Header, Content, Footer: AntFooter, Sider: AntSider } = AntLayout;
+const {
+  Header: AntHeader,
+  Content,
+  Footer: AntFooter,
+  Sider: AntSider,
+} = AntLayout;
 
 const Sider = styled(AntSider)`
   overflow: auto;
@@ -37,8 +43,14 @@ const MainLayout = styled(AntLayout)`
 const MainWrapper = styled(Content)`
   padding: 24px 16px 0;
   overflow: initial;
-  /* 133 是 header + footer 的高度 */
-  min-height: calc(100vh - 133px);
+  /* 64px 是 header 的高度 */
+  /* 69px 是 footer 的高度 */
+  min-height: calc(100vh - 69px);
+`;
+
+const Header = styled(AntHeader)`
+  background: #fff;
+  padding: 0;
 `;
 
 const Main = styled.div`
@@ -64,7 +76,7 @@ const Logo = styled.div`
   background-size: 80%;
 `;
 
-const menus = [{ route: '/users', label: '报名注册学学生', icon: 'user' }];
+const menus = [{ route: '/trials', label: '报名注册学生', icon: 'table' }];
 
 function Layout({ children, history, location: { pathname }, ...props }) {
   const menuNodes = menus.map(({ route, label, icon }, index) => {
@@ -101,7 +113,7 @@ function Layout({ children, history, location: { pathname }, ...props }) {
       </Sider>
 
       <MainLayout>
-        <Header style={{ background: '#fff', padding: 0 }} />
+        {/* <Header /> */}
 
         <MainWrapper>
           <Main>{children}</Main>

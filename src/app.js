@@ -5,7 +5,7 @@ import Layout from '@/components/layout';
 import { GlobalStyle } from './style/global';
 
 const Home = React.lazy(() => import('@/pages/home'));
-const Users = React.lazy(() => import('@/pages/users'));
+const Trials = React.lazy(() => import('@/pages/trials'));
 
 function LazyRoute({ lazy: Lazy, ...props }) {
   return (
@@ -30,7 +30,7 @@ export default function App() {
         <Layout>
           <Switch>
             <LazyRoute exact path="/" lazy={Home} />
-            <LazyRoute exact path="/users" lazy={Users} />
+            <LazyRoute exact path="/trials" lazy={Trials} />
           </Switch>
         </Layout>
       </BrowserRouter>
