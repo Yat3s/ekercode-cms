@@ -25,13 +25,13 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Layout>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Layout>
           <Switch>
             <LazyRoute exact path="/" lazy={Home} />
           </Switch>
-        </BrowserRouter>
-      </Layout>
+        </Layout>
+      </BrowserRouter>
     </>
   );
 }
