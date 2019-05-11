@@ -41,7 +41,12 @@ export default function TrialsPage() {
 
   return (
     <>
-      <Table loading={loading} dataSource={data} columns={columns} />
+      <Table
+        title={() => '申请试用的用户'}
+        loading={loading}
+        dataSource={data}
+        columns={columns}
+      />
     </>
   );
 
@@ -61,5 +66,5 @@ export default function TrialsPage() {
 }
 
 function formatDate(date) {
-  return moment(date).format('YYYY-MM-dd HH:mm');
+  return moment(date).format('YYYY-MM-DD HH:mm');
 }

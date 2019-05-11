@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout as AntLayout, Menu, Icon } from 'antd';
 import styled from 'styled-components';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import LOGO_IMAGE from './logo.png';
 
@@ -54,9 +54,10 @@ const Header = styled(AntHeader)`
 `;
 
 const Main = styled.div`
-  padding: 24;
+  /* padding: 2em; */
+  padding: 24px;
   background: #fff;
-  text-align: center;
+  border-radius: 4px;
 `;
 
 const Footer = styled(AntFooter)`
@@ -104,7 +105,9 @@ function Layout({ children, history, location: { pathname }, ...props }) {
     <AntLayout>
       <Sider theme={THEME}>
         <SiderContentContainer>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
 
           <SiderMenu theme={THEME} mode="inline" selectedKeys={selectedKeys}>
             {menuNodes}
