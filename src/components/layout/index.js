@@ -55,7 +55,7 @@ const THEME = 'light';
 
 const Logo = styled.div`
   height: 64px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
   border-right: 1px solid #e8e8e8;
   padding: 1em;
   background-image: url(${LOGO_IMAGE});
