@@ -6,10 +6,10 @@ module.exports = options => {
       html: {
         // favicon: './public/favicon.ico',
         meta: {
-          author: 'Ekercode',
-          content: 'Ekercode CMS',
+          author: 'Eker Code',
+          content: 'Eker Code CMS',
         },
-        title: 'Ekercode CMS',
+        title: 'Eker Code CMS',
       },
     },
     chainWebpack(config, context) {

@@ -56,7 +56,7 @@ class SignInPage extends React.Component {
 
     return (
       <Root>
-        <Header>Ekercode CMS</Header>
+        <Header>Eker Code CMS</Header>
 
         <Form onSubmit={this.handleSubmit}>
           <Form.Item>
